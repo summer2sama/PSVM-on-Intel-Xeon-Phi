@@ -22,8 +22,8 @@ The training datafile for test are as follows:
 We compare the Time consumption on whole application and the most important step, step 2.2.3 E = I + H^T * D * H, which usually take most time of the whole application but can be offloaded to Intel Xeon Phi.
 
 For hardware configuration:
-- CPU:24  Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz
-- MIC:
+ - CPU: 24  Intel(R) Xeon(R) CPU E5-2697 v2 @ 2.70GHz
+ - MIC: Intel Corporation Device 2250 (rev 11)
 
 Results are as follows:
  +--------------------+--------------+--------------+--------------+--------------+--------------+
