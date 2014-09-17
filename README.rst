@@ -1,8 +1,9 @@
 PSVM-on-Intel-Xeon-Phi
 ======================
 This is a quick start manual for PSVM-on-Intel-Xeon-Phi.
+
 Introduction
-============
+=============
 - PSVM-on-Intel-Xeon-Phi is an application for PSVM algorithm. It is supposed to run on CPU with Intel Xeon Phi as co-processors.
 - The algorithm PSVM is from the following paper: http://books.nips.cc/papers/files/nips20/NIPS2007_0435.pdf. It is an all-kernel-support version of SVM, which can parallel run on multiple machines. PSVM Open Source is available for download at http://code.google.com/p/psvm/.
 - This code is based on the open source code mentioned above.
@@ -16,6 +17,7 @@ Prepare datafile
   1  0:1    1:2
   
   -1 0:100  1:200
+
 Compile
 ========
 - We use icpc compiler here. 
