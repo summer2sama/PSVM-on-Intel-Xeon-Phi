@@ -22,16 +22,16 @@ Compile
 ========
 - We use icpc compiler here. 
 - To compare the performance between circumstances with and withour using Intel Xeon Phi as co-processor, we could compile 2 version:
-    - $ icpc matrix.cc model.cc timer.cc document.cc matrix_manipulation.cc pd_ipm.cc io.cc kernel.cc svm_train.cc util.cc -no-offload -o train_no_offload_baseline -O3 -vec-report2
-    - $ icpc matrix.cc model.cc timer.cc document.cc matrix_manipulation.cc pd_ipm.cc io.cc kernel.cc svm_train.cc util.cc -openmp -o train_offload_openmp -O3 -vec-report2
+    - ``$ icpc matrix.cc model.cc timer.cc document.cc matrix_manipulation.cc pd_ipm.cc io.cc kernel.cc svm_train.cc util.cc -no-offload -o train_no_offload_baseline -O3 -vec-report2``
+    - ``$ icpc matrix.cc model.cc timer.cc document.cc matrix_manipulation.cc pd_ipm.cc io.cc kernel.cc svm_train.cc util.cc -openmp -o train_offload_openmp -O3 -vec-report2``
 
 Train
 ========
 - Dowload a6a from http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a6a as training datafile.
 - Train
-  - $ mkdir /home/$USER/PSVM-on-Intel-Xeon-Phi/model/
-  - $ ./train_no_offload_baseline -rank_ratio 0.1 -kernel_type 2 -hyper_parm 1 -gamma 0.01 -model_path /home/zetta/wuyang/PSVM-on-Intel-Xeon-Phi/model a6a
-  - $ ./train_offload_openmp -rank_ratio 0.1 -kernel_type 2 -hyper_parm 1 -gamma 0.01 -model_path /home/zetta/wuyang/PSVM-on-Intel-Xeon-Phi/model a6a
+  - ``$ mkdir /home/$USER/PSVM-on-Intel-Xeon-Phi/model/``
+  - ``$ ./train_no_offload_baseline -rank_ratio 0.1 -kernel_type 2 -hyper_parm 1 -gamma 0.01 -model_path /home/zetta/wuyang/PSVM-on-Intel-Xeon-Phi/model a6a``
+  - ``$ ./train_offload_openmp -rank_ratio 0.1 -kernel_type 2 -hyper_parm 1 -gamma 0.01 -model_path /home/zetta/wuyang/PSVM-on-Intel-Xeon-Phi/model a6a``
 - You will see files about model, time-consumption in the /home/$USER/PSVM-on-Intel-Xeon-Phi/model/ folder after a training.
 
 Command-line flags
